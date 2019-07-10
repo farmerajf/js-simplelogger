@@ -1,4 +1,5 @@
-import Logger from "./logger"
+import { Logger } from "./logger"
 
-Logger.SetMinimumSeverity(1);
-Logger.Log(1, "Error");
+export default function Test() {
+    Logger.Log(1, "Error");
+};
