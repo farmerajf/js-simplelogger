@@ -1,22 +1,17 @@
 class JSLogger {
     constructor() {
-        if (!this.minimumSeverity) {
-            this.minimumSeverity = 3;
+        if (!global.minimumSeverity) {
+            global.minimumSeverity = 3;
         }
     }
 
     SetMinimumSeverity(severity) {
-        console.log("Minimum severity set to " + severity);
-        this.minimumSeverity = severity;
+        global.minimumSeverity = severity;
     }
 
     Log(severity, message) {
-        console.log("Minimum severity is " + this.minimumSeverity + " and severity is " + severity);
-        if (severity >= this.minimumSeverity) {
-            console.log("So logging");
+        if (severity >= global.minimumSeverity) {
             console.log(message);
-        } else {
-            console.log("So not logging");
         }
     }
 }
