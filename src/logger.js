@@ -21,4 +21,5 @@ class JSLogger {
     }
 }
 
-export const Logger = new JSLogger();
+const Logger = new JSLogger();
+export default Logger;
